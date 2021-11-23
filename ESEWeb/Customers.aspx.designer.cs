@@ -11,26 +11,26 @@ namespace ESEWeb
 {
 
 
-    public partial class Customers
+    public partial class WebForm1
     {
 
         /// <summary>
-        /// form1 control.
+        /// txtCustomerSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtCustomerSearch;
 
         /// <summary>
-        /// ddlEmployeeName control.
+        /// btnCustomerSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEmployeeName;
+        protected global::System.Web.UI.WebControls.Button btnCustomerSearch;
 
         /// <summary>
         /// lbCustomers control.
@@ -42,12 +42,30 @@ namespace ESEWeb
         protected global::System.Web.UI.WebControls.ListBox lbCustomers;
 
         /// <summary>
-        /// fvCustomerDetails control.
+        /// gvCustomerOrderDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView fvCustomerDetails;
+        protected global::System.Web.UI.WebControls.GridView gvCustomerOrderDetail;
+
+        /// <summary>
+        /// customerLookup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource customerLookup;
+
+        /// <summary>
+        /// receiptData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource receiptData;
     }
 }
