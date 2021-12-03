@@ -11,7 +11,7 @@ namespace ESEWeb
 {
 
 
-    public partial class WebForm7
+    public partial class CustomerDetails
     {
 
         /// <summary>
@@ -24,58 +24,22 @@ namespace ESEWeb
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtCustomerSearch control.
+        /// txtCustomerName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustomerSearch;
+        protected global::System.Web.UI.WebControls.Label txtCustomerName;
 
         /// <summary>
-        /// btnSearch control.
+        /// fvCustomerDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
-
-        /// <summary>
-        /// lbCustomers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbCustomers;
-
-        /// <summary>
-        /// txtTest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtTest;
-
-        /// <summary>
-        /// dvCustomerDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView dvCustomerDetails;
-
-        /// <summary>
-        /// customerSearchData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource customerSearchData;
+        protected global::System.Web.UI.WebControls.FormView fvCustomerDetails;
 
         /// <summary>
         /// customerData control.
@@ -85,5 +49,23 @@ namespace ESEWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource customerData;
+
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+
+        /// <summary>
+        /// receiptData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource receiptData;
     }
 }

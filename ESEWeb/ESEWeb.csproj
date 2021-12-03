@@ -119,6 +119,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CustomerDetails.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -131,11 +132,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Customers.aspx" />
     <Content Include="Employees.aspx" />
     <Content Include="Orders.aspx" />
     <Content Include="Repairs.aspx" />
     <Content Include="Sale.aspx" />
+    <Content Include="Customers.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -188,6 +189,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomerDetails.aspx.cs">
+      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerDetails.aspx.designer.cs">
+      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,13 +228,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Customers.aspx.cs">
-      <DependentUpon>Customers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customers.aspx.designer.cs">
-      <DependentUpon>Customers.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Employees.aspx.cs">
       <DependentUpon>Employees.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,6 +255,13 @@
     </Compile>
     <Compile Include="Sale.aspx.designer.cs">
       <DependentUpon>Sale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

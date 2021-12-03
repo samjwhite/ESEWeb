@@ -1,96 +1,82 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="ESEWeb.WebForm1" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-          <div class="container">
-        <%--search bar --%>
-    <div class="row my-3">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="ESEWeb.WebForm7" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <h1>Customer Search</h1>
+   
+   
+    
         
-
-
-        <asp:TextBox ID="txtCustomerSearch" runat="server" Width="290px"></asp:TextBox>
-        <asp:Button ID="btnCustomerSearch" runat="server" Text="Search" />
+        <div class="row">
         
+         <asp:TextBox ID="txtCustomerSearch" runat="server" type="text"  placeholder="Customer name" Width="361px"></asp:TextBox>
+ <asp:Button  class="btn btn-outline-primary" ID="btnSearch" runat="server" Text="Search"  />
+         
+   
+       </div> 
+        
+            <div class="row">
+            <div class="col-lg-6">
+    <asp:ListBox ID="lbCustomers" runat="server" DataSourceID="customerSearchData" DataTextField="custName" DataValueField="id" Height="187px" Width="366px" OnSelectedIndexChanged="lbCustomers_SelectedIndexChanged" AutoPostBack="True"></asp:ListBox>
+            <asp:Label ID="txtTest" runat="server"></asp:Label>
+            
+            
+            <asp:DetailsView ID="dvCustomerDetails" runat="server" DataSourceID="customerData" Height="68px" Width="361px" Visible="false">
+                <FooterTemplate>
+                    <asp:Button ID="btnCustomerDetails" runat="server" OnClick="btnCustomerDetails_Click" Text="Details" />
+                    <asp:Button ID="btnCustomerEdit" runat="server" Text="Edit" />
+                </FooterTemplate>
+            </asp:DetailsView>
+            
+            </div>
+</div>
 
-
+<div class="row">
     </div>
 
-    <%--search results --%>    <%--onclick open Send Customer ID to gvCustomerDetail--%>
-    <div class="row">
-        
-        <%--listbox--%>
-        <div class="col-md-4">         
+    
+        <br />
 
-        <asp:ListBox ID="lbCustomers" runat="server" Height="128px" Width="292px" AutoPostBack="True" DataSourceID="customerLookup" DataTextField="custName" DataValueField="id"></asp:ListBox>
+        <asp:ObjectDataSource ID="customerSearchData" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="ESELib.CustomerLookupDataSetTableAdapters.customerByNameTableAdapter">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtCustomerSearch" DefaultValue="1" Name="custName" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="customerData" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="ESELib.CustomerLookupDataSetTableAdapters.customerTableAdapter" UpdateMethod="Update">
+            <DeleteParameters>
+                <asp:Parameter Name="Original_id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="custFirst" Type="String" />
+                <asp:Parameter Name="custLast" Type="String" />
+                <asp:Parameter Name="custPhone" Type="String" />
+                <asp:Parameter Name="custAddress" Type="String" />
+                <asp:Parameter Name="custCity" Type="String" />
+                <asp:Parameter Name="custPostal" Type="String" />
+                <asp:Parameter Name="custEmail" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="custFirst" Type="String" />
+                <asp:Parameter Name="custLast" Type="String" />
+                <asp:Parameter Name="custPhone" Type="String" />
+                <asp:Parameter Name="custAddress" Type="String" />
+                <asp:Parameter Name="custCity" Type="String" />
+                <asp:Parameter Name="custPostal" Type="String" />
+                <asp:Parameter Name="custEmail" Type="String" />
+                <asp:Parameter Name="Original_id" Type="Int32" />
+            </UpdateParameters>
+        </asp:ObjectDataSource>
         
-            <br />
-            <br />
-            <br />
-        
-            <asp:GridView ID="gvCustomerOrderDetail" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="receiptData">
-                <Columns>
-                    <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                    <asp:BoundField DataField="ordNumber" HeaderText="ordNumber" SortExpression="ordNumber" />
-                    <asp:BoundField DataField="ordDate" HeaderText="ordDate" SortExpression="ordDate" />
-                    <asp:CheckBoxField DataField="ordPaid" HeaderText="ordPaid" SortExpression="ordPaid" />
-                    <asp:BoundField DataField="paymentID" HeaderText="paymentID" SortExpression="paymentID" />
-                    <asp:BoundField DataField="custID" HeaderText="custID" SortExpression="custID" />
-                    <asp:BoundField DataField="empID" HeaderText="empID" SortExpression="empID" />
-                </Columns>
-            </asp:GridView>
-        
-            <br />
-            <br />
-        
-            </div>  
-        <%--Order details--%>
-        <div class="col-md-4"> 
-            <%--Update leads to the CustomerUpdate Page. Remove promts confirmation. --%>
 
-            <br />
-            <asp:ObjectDataSource ID="customerLookup" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="ESELib.CustomerLookupDataSetTableAdapters.customerByNameTableAdapter">
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="txtCustomerSearch" DefaultValue="1" Name="custName" PropertyName="Text" Type="String" />
-                </SelectParameters>
-            </asp:ObjectDataSource>
-            <asp:ObjectDataSource ID="receiptData" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="ESELib.EmployeeLookupDataSetTableAdapters.receiptByCustIDTableAdapter" UpdateMethod="Update">
-                <DeleteParameters>
-                    <asp:Parameter Name="Original_id" Type="Int32" />
-                    <asp:Parameter Name="Original_ordNumber" Type="String" />
-                    <asp:Parameter Name="Original_ordDate" Type="DateTime" />
-                    <asp:Parameter Name="Original_ordPaid" Type="Boolean" />
-                    <asp:Parameter Name="Original_paymentID" Type="Int32" />
-                    <asp:Parameter Name="Original_custID" Type="Int32" />
-                    <asp:Parameter Name="Original_empID" Type="Int32" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="ordNumber" Type="String" />
-                    <asp:Parameter Name="ordDate" Type="DateTime" />
-                    <asp:Parameter Name="ordPaid" Type="Boolean" />
-                    <asp:Parameter Name="paymentID" Type="Int32" />
-                    <asp:Parameter Name="custID" Type="Int32" />
-                    <asp:Parameter Name="empID" Type="Int32" />
-                </InsertParameters>
-                <SelectParameters>
-                    <asp:ControlParameter ControlID="lbCustomers" Name="Param1" PropertyName="SelectedValue" Type="Int32" />
-                </SelectParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="ordNumber" Type="String" />
-                    <asp:Parameter Name="ordDate" Type="DateTime" />
-                    <asp:Parameter Name="ordPaid" Type="Boolean" />
-                    <asp:Parameter Name="paymentID" Type="Int32" />
-                    <asp:Parameter Name="custID" Type="Int32" />
-                    <asp:Parameter Name="empID" Type="Int32" />
-                    <asp:Parameter Name="Original_id" Type="Int32" />
-                    <asp:Parameter Name="Original_ordNumber" Type="String" />
-                    <asp:Parameter Name="Original_ordDate" Type="DateTime" />
-                    <asp:Parameter Name="Original_ordPaid" Type="Boolean" />
-                    <asp:Parameter Name="Original_paymentID" Type="Int32" />
-                    <asp:Parameter Name="Original_custID" Type="Int32" />
-                    <asp:Parameter Name="Original_empID" Type="Int32" />
-                </UpdateParameters>
-            </asp:ObjectDataSource>
-            </div>
 
-    </div>
-
-            </div>
-</asp:Content>
+        </div>
+    </form>
+</body>
+</html>

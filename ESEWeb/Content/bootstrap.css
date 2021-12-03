@@ -1610,6 +1610,8 @@ pre code {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+    height: 422px;
+    margin-top: 64px;
 }
 .row-no-gutters {
   margin-right: 0;
@@ -1671,6 +1673,9 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+    top: -388px;
+    left: 4px;
+    height: 492px;
 }
 .col-xs-1,
 .col-xs-2,
@@ -2640,7 +2645,6 @@ input[type="range"] {
 }
 select[multiple],
 select[size] {
-  height: auto;
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -2657,8 +2661,6 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
-  height: 34px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -3893,6 +3895,9 @@ tbody.collapse.in {
   position: relative;
   display: table;
   border-collapse: separate;
+    top: 20px;
+    left: 0px;
+    height: 90px;
 }
 .input-group[class*="col-"] {
   float: none;
@@ -3903,7 +3908,7 @@ tbody.collapse.in {
   position: relative;
   z-index: 2;
   float: left;
-  width: 100%;
+  width: 20%;
   margin-bottom: 0;
 }
 .input-group .form-control:focus {
@@ -3959,6 +3964,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn,
 .input-group .form-control {
   display: table-cell;
+    top: 1px;
+    left: -10px;
 }
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
