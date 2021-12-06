@@ -50,7 +50,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="ESELib">
+    <Reference Include="ESELib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ESELib\ESELib\bin\Debug\ESELib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -175,6 +176,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Orders.aspx" />
     <Content Include="PassReset.aspx" />
+    <Content Include="Receipt.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Repairs.aspx" />
     <Content Include="Sale.aspx" />
@@ -271,6 +273,13 @@
       <DependentUpon>PassReset.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
