@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ESELib;
 using ESELib.CustomerLookupDataSetTableAdapters;
+using ESELib.EmployeeLookupDataSetTableAdapters;
 
 namespace ESEWeb
 {

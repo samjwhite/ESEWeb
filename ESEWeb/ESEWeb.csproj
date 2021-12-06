@@ -125,6 +125,10 @@
     <Content Include="App_Data\Emmas_log.ldf">
       <DependentUpon>Emmas.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Users.mdf" />
+    <Content Include="App_Data\Users_log.ldf">
+      <DependentUpon>Users.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
