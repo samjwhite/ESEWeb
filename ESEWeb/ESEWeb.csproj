@@ -157,6 +157,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CreatePurchase.aspx" />
+    <Content Include="CreateService.aspx" />
     <Content Include="css\style.css" />
     <Content Include="CustomerDetails.aspx" />
     <Content Include="Dashboard.aspx" />
@@ -177,6 +179,7 @@
     <Content Include="Orders.aspx" />
     <Content Include="PassReset.aspx" />
     <Content Include="Receipt.aspx" />
+    <Content Include="ReceiptDetails.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Repairs.aspx" />
     <Content Include="Sale.aspx" />
@@ -233,6 +236,20 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreatePurchase.aspx.cs">
+      <DependentUpon>CreatePurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePurchase.aspx.designer.cs">
+      <DependentUpon>CreatePurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateService.aspx.cs">
+      <DependentUpon>CreateService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateService.aspx.designer.cs">
+      <DependentUpon>CreateService.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerDetails.aspx.cs">
       <DependentUpon>CustomerDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -279,6 +296,13 @@
     </Compile>
     <Compile Include="Receipt.aspx.designer.cs">
       <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptDetails.aspx.cs">
+      <DependentUpon>ReceiptDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReceiptDetails.aspx.designer.cs">
+      <DependentUpon>ReceiptDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
