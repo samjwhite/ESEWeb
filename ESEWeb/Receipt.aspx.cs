@@ -8,6 +8,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/// <summary>
+/// Creator: Vinicius Pereira
+/// Group: Smart Code
+/// Contributors:
+/// </summary>
+
 namespace ESEWeb
 {
     public partial class Receipt : System.Web.UI.Page
@@ -84,7 +90,7 @@ namespace ESEWeb
                 DataRow nr = receipts.NewRow();
                 nr[0] = r[0].ToString();
                 nr[1] = r[1].ToString();
-                nr[2] = r[2].ToString();
+                nr[2] = DateTime.Parse(r[2].ToString()).ToString("dddd, MMMM d, yyyy");
                 nr[3] = r[3].ToString() == "True" ? "Paid" : "Not Paid";
                 nr[4] = r[4] != null ? dsEmmas.employeeLookUp.FindByid(Convert.ToInt32(r[4]))[1].ToString() : "None";
                 nr[5] = r[5] != null ? dsEmmas.customerLookUp.FindByid(Convert.ToInt32(r[5]))[1].ToString() : "None";

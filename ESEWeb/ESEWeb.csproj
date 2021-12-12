@@ -52,7 +52,7 @@
     </Reference>
     <Reference Include="ESELib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ESELib\ESELib\bin\Debug\ESELib.dll</HintPath>
+      <HintPath>..\..\new\ESELib\ESELib\bin\Debug\ESELib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -159,7 +159,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="CreatePurchase.aspx" />
     <Content Include="CreateService.aspx" />
-    <Content Include="css\style.css" />
+    <Content Include="css\Base\base.css" />
+    <Content Include="css\layout.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\Modules\header.css" />
+    <Content Include="css\auth.css" />
     <Content Include="CustomerDetails.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Default.aspx" />
@@ -187,6 +192,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\components\headerComponent.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -213,6 +219,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ServiceOrders.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -310,6 +317,13 @@
     </Compile>
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceOrders.aspx.cs">
+      <DependentUpon>ServiceOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceOrders.aspx.designer.cs">
+      <DependentUpon>ServiceOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
