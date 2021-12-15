@@ -133,6 +133,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Employees.aspx" />
+    <Content Include="NewCustomer.aspx" />
     <Content Include="Orders.aspx" />
     <Content Include="Repairs.aspx" />
     <Content Include="Sale.aspx" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomer.aspx.cs">
+      <DependentUpon>NewCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCustomer.aspx.designer.cs">
+      <DependentUpon>NewCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
