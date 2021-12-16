@@ -1,0 +1,37 @@
+﻿:root {
+    --blue: rgb(13, 110, 253);
+    --dark-blue: rgb(12,79,178);
+    --gray: rgb(222,220,223);
+    font-family: 'Public Sans', sans-serif;
+}
+
+.headerStyle{
+    background-color: var(--blue);
+    border: 1px solid var(--blue);    
+    color: white;    
+}
+
+    .headerStyle th {
+        padding: 7px 10px;
+    }
+
+.rowStyle{    
+    text-align: center;
+}
+
+    .rowStyle td {
+        padding: 20px;
+    }
+
+.ddl{
+    background-color: var(--gray);
+    font-weight:600;
+    min-width: 10%;
+}
+
+.button{
+    background-color: var(--blue);
+    border-radius: 20px;
+    color:white;
+    min-width: 10%;
+}
