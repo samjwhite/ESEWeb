@@ -9,6 +9,11 @@ using ESELib;
 using ESELib.CustomerLookupDataSetTableAdapters;
 
 namespace ESEWeb
+/// <summary>
+/// Author: Serge Riazanov
+/// Team: Smart Code
+/// Last Modified: 12/16/2021
+/// </summary>
 {
     public partial class CustomerDetails : System.Web.UI.Page
     {
@@ -21,9 +26,6 @@ namespace ESEWeb
         {
             dsCustomer = new CustomerLookupDataSet();
             receiptTableAdapter daReceipt = new receiptTableAdapter();
-
-           // daReceipt.Fill(dsCustomer.receipt);
-
 
             string queryString = Request.QueryString["customerID"].ToString();
             int customerId = Convert.ToInt32(queryString) - 1;
@@ -38,10 +40,6 @@ namespace ESEWeb
                 txtCustomerName.Text = customerName;
             }
 
-          // DataRow[] dsRows = dsCustomer.receipt.Select("custID == 1");
-
-
-
         }
 
 
@@ -52,9 +50,18 @@ namespace ESEWeb
             FormViewRow row = fvCustomerDetails.Row;
             DataRowView rowView = (DataRowView)fvCustomerDetails.DataItem;
 
-            
-              //  txtCustomerName.Text = rowView["custFirst"].ToString() + " " + rowView["custLast"].ToString();
-            
+        }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            txtCustomerName.Text = "Customer "+ customerName +" was successfully deleted.";
+            fvCustomerDetails.Visible = false;
+
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Customers.aspx");
         }
     }
 }

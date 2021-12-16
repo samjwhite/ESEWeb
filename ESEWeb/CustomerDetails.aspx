@@ -159,7 +159,7 @@
             </table>
             <br />
             <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
-            &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
+            &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClick="DeleteButton_Click" OnClientClick="return confirm('Are you sure you want to delete this customer? After confirmation you will be redirected to Customers page.')"/>
             &nbsp;
         </ItemTemplate>
         </asp:FormView>
@@ -205,11 +205,14 @@
                     <asp:BoundField DataField="custName" HeaderText="Customer" ReadOnly="True" SortExpression="custName" />
                 </Columns>
             </asp:GridView>
+                    <br />
             <asp:ObjectDataSource ID="receiptData" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="ESELib.CustomerLookupDataSetTableAdapters.receiptTableAdapter">
                 <SelectParameters>
                     <asp:QueryStringParameter Name="custID" QueryStringField="customerID" Type="Int32" />
                 </SelectParameters>
             </asp:ObjectDataSource>
+
+                    <asp:LinkButton ID="btnBack" runat="server" OnClick="btnBack_Click">Back</asp:LinkButton>
 
                 </div>
 

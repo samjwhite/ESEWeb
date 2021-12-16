@@ -9,7 +9,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-             <h1>Customer Search</h1>
+             <h1>Customers</h1>
+            <hr />
+             <p>&nbsp;</p>
+             <p>
+                 <asp:LinkButton ID="btnNewCustomer" runat="server" OnClick="btnNewCustomer_Click">New Customer</asp:LinkButton>
+             </p>
    
    
     
@@ -18,6 +23,10 @@
         
          <asp:TextBox ID="txtCustomerSearch" runat="server" type="text"  placeholder="Customer name" Width="361px"></asp:TextBox>
  <asp:Button  class="btn btn-outline-primary" ID="btnSearch" runat="server" Text="Search"  />
+         
+   
+            <br />
+            <br />
          
    
        </div> 

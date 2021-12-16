@@ -6,7 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ESELib;
 using ESELib.CustomerLookupDataSetTableAdapters;
-
+/// <summary>
+/// Author: Serge Riazanov
+/// Team: Smart Code
+/// Last Modified: 12/16/2021
+/// </summary>
 namespace ESEWeb
 {
     public partial class WebForm7 : System.Web.UI.Page
@@ -37,6 +41,10 @@ namespace ESEWeb
                 Response.Redirect("CustomerDetails.aspx?customerID=" + customerId);
             }
 
-        
+        protected void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateCustomer.aspx");
+            
+        }
     }
 }
